@@ -22,7 +22,7 @@
     <div class="menu-container">
         <header class="menu-header">
             <img src="https://i.ibb.co/nCqS9g0/rushfordclean-1.png" alt="Castify Logo" class="logo">
-            <h1>Welcome to Castify!</h1>
+            <h1>Welcome to Castify, <span id="profile-name"></span>!</h1>
             <nav class="menu-navigation">
                 <ul>
                     <li><a href="upload-video.html"><i class="fas fa-upload"></i> Upload Video</a></li>
@@ -32,26 +32,21 @@
                 </ul>
             </nav>
         </header>
-        <main class="menu-content">
-            <h2>Your Videos</h2>
-            <p>Explore your recently uploaded and liked videos here.</p>
-            <div class="video-thumbnails">
-                <!-- Thumbnails would be dynamically generated here -->
-                <div class="thumbnail">
-                    <img src="video-thumbnail-placeholder.png" alt="Video Thumbnail">
-                    <p>Video Title 1</p>
-                </div>
-                <div class="thumbnail">
-                    <img src="video-thumbnail-placeholder.png" alt="Video Thumbnail">
-                    <p>Video Title 2</p>
-                </div>
-                <div class="thumbnail">
-                    <img src="video-thumbnail-placeholder.png" alt="Video Thumbnail">
-                    <p>Video Title 3</p>
-                </div>
-            </div>
-        </main>
     </div>
+
+    <script>
+        window.onload = function() {
+            const currentUser = localStorage.getItem('currentUser');
+
+            if (currentUser) {
+                // Display the current user's nickname in the welcome message
+                document.getElementById('profile-name').textContent = currentUser;
+            } else {
+                alert('No user logged in. Redirecting to sign-up page.');
+                window.location.href = 'create-account.html'; // Redirect if no user is logged in
+            }
+        };
+    </script>
 </body>
 </html>
 <!-- partial -->
