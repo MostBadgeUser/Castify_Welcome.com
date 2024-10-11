@@ -35,6 +35,7 @@ body {
 
 .menu-header .logo {
     width: 150px; /* Logo width */
+    cursor: pointer; /* Pointer cursor on logo */
 }
 
 .menu-navigation ul {
