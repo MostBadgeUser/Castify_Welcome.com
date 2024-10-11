@@ -28,7 +28,7 @@
                     <li><a href="upload-video.html"><i class="fas fa-upload"></i> Upload Video</a></li>
                     <li><a href="#"><i class="fas fa-history"></i> Recently Viewed Videos</a></li>
                     <li><a href="#"><i class="fas fa-cog"></i> Account Settings</a></li>
-                    <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                 </ul>
             </nav>
         </header>
@@ -42,8 +42,8 @@
                 // Display the current user's nickname in the welcome message
                 document.getElementById('profile-name').textContent = currentUser;
             } else {
-                alert('No user logged in. Redirecting to sign-up page.');
-                window.location.href = 'create-account.html'; // Redirect if no user is logged in
+                alert('No user logged in. Redirecting to sign-in page.');
+                window.location.href = 'login.html'; // Redirect if no user is logged in
             }
         };
     </script>
